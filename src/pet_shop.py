@@ -8,6 +8,15 @@ def get_total_cash(total):
     total = total["admin"]['total_cash']
     return total
 
+
+def add_or_remove_cash(total_petshop, cash):
+    total_petshop["admin"]["total_cash"] += cash
+
+
+
+
+
+
 def get_pets_sold(pets_sold):
     return pets_sold["admin"]["pets_sold"]
 
@@ -27,8 +36,16 @@ def get_pets_by_breed(pets, breed):
         if pet["breed"] == breed:
             total_pets.append(pet)
     return total_pets
+
+
+# test runs through dictionary to look for a name in list
+def find_pet_by_name(list, pet_name):
+    for each_pet in list["pets"]:
+        if each_pet["name"] == pet_name:
+          return each_pet
+        
     
-def find_pet_by_name(pet, name):
+     
     
     
 
