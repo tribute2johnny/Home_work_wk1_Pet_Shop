@@ -14,9 +14,6 @@ def add_or_remove_cash(total_petshop, cash):
 
 
 
-
-
-
 def get_pets_sold(pets_sold):
     return pets_sold["admin"]["pets_sold"]
 
@@ -43,8 +40,9 @@ def find_pet_by_name(list, pet_name):
     for each_pet in list["pets"]:
          if each_pet["name"] == pet_name:
           return each_pet
-        
+ 
  # can call the function above to find the name in the list(had to get some help with this one)   
+
 def remove_pet_by_name(pet_shop, name):
     pet = find_pet_by_name(pet_shop, name)
     pet_shop["pets"].remove(pet)
@@ -64,7 +62,10 @@ def get_customer_pet_count(count):
 def add_pet_to_customer(customer, pet):
     customer["pets"].append(pet)
     
-    
+# def customer_can_afford_pet(customer_funds, price_of_pet):
+#     max_price = price_of_pet["price"]
+#     if customer_funds >= max_price:
+#       return True
       
 
     
