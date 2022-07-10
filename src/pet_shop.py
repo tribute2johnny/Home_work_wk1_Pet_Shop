@@ -41,11 +41,35 @@ def get_pets_by_breed(pets, breed):
 # test runs through dictionary to look for a name in list
 def find_pet_by_name(list, pet_name):
     for each_pet in list["pets"]:
-        if each_pet["name"] == pet_name:
+         if each_pet["name"] == pet_name:
           return each_pet
         
+ # can call the function above to find the name in the list(had to get some help with this one)   
+def remove_pet_by_name(pet_shop, name):
+    pet = find_pet_by_name(pet_shop, name)
+    pet_shop["pets"].remove(pet)
+      
+def add_pet_to_stock(pet_shop, pet):
+    pet_shop["pets"].append(pet)
+
+def get_customer_cash(customer):
+    return customer["cash"]
+
+def remove_customer_cash(customer, cash):
+    customer["cash"] -= cash
+
+def get_customer_pet_count(count):
+    return len(count["pets"])
+
+def add_pet_to_customer(customer, pet):
+    customer["pets"].append(pet)
     
-     
+    
+      
+
+    
+            
+        
     
     
 
